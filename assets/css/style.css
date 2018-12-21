@@ -1,0 +1,86 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-box {
+  width: 1000px;
+  line-height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  background-color: rgba(80, 80, 80, 0.8);
+  font-family: "Righteous", cursive;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: -1px -1px 0 white,
+                1px -1px 0 white, 
+               -1px 1px 0 white,
+                1px 1px 0 white;
+}
+#game-start-button {
+  width: 175px;
+  line-height: 70px;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: "Righteous", cursive;
+  text-align: center;
+}
+.col-4 {
+  width: 33.33%;
+}
+.textBox {
+  width: auto;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: "Righteous", cursive;
+  text-align: center;
+  font-size: 40px;
+}
+.textBoxAnswer {
+  width: auto;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: "Righteous", cursive;
+  text-align: center;
+  font-size: 40px;
+}
+#countdownTimer {
+  width: auto;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: -1px -1px 0 white,
+                1px -1px 0 white, 
+               -1px 1px 0 white,
+                1px 1px 0 white;
+}
+#pickAnswer {
+  width: auto;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  font-family: "Righteous", cursive;
+  text-align: center;
+  font-size: 40px;
+  text-shadow: -2px -2px 0 white, 
+                2px -2px 0 white, 
+               -2px 2px 0 white,
+                2px 2px 0 white;
+}
