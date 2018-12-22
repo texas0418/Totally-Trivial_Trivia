@@ -9,6 +9,9 @@ body {
   margin-right: auto;
   margin-top: 4%;
   background-color: rgba(80, 80, 80, 0.8);
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
   font-family: "Righteous", cursive;
   font-size: 60px;
   text-align: center;
@@ -28,8 +31,8 @@ body {
   font-family: "Righteous", cursive;
   text-align: center;
 }
-.col-4 {
-  width: 33.33%;
+.col-6 {
+  width: 50%;
 }
 .textBox {
   width: auto;
@@ -39,6 +42,9 @@ body {
   margin-top: 1%;
   margin-bottom: 1%;
   background-color: rgba(255, 255, 255, 0.7);
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
   font-family: "Righteous", cursive;
   text-align: center;
   font-size: 40px;
@@ -51,6 +57,9 @@ body {
   margin-top: 1%;
   margin-bottom: 1%;
   background-color: rgba(255, 255, 255, 0.7);
+  border-color: black;
+  border-width: 5px;
+  border-style: solid;
   font-family: "Righteous", cursive;
   text-align: center;
   font-size: 40px;
@@ -83,4 +92,11 @@ body {
                 2px -2px 0 white, 
                -2px 2px 0 white,
                 2px 2px 0 white;
+}
+.textReults {
+  width: auto;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  font-size: 25px;
 }
