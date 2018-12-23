@@ -30,7 +30,7 @@ $(document).ready(function() {
       choiceC: "I Love a Mystery",
       choiceD: "The Green Hornet",
       correctAnswer: "B",
-      factoid: ""
+      factoid: "<h2><b>Little Orphan Annie.</b></h2> <br> After drinking gallons of Ovaltine Ralphie finally receives his long-awaited Orphan Annie Secret Society decoder pin in the mail. After decoding his first message he finds out it’s only a crummy commercial telling him to “Be Sure To Drink Your Ovaltine.”"
     },
     {
       question: "Who did Michael J. Fox replace as the original Marty McFly?",
@@ -203,7 +203,7 @@ $(document).ready(function() {
       factoid: ""
     },
     {
-      question: "What was the hooker’s name (Jamie Lee Curtis character)?",
+      question: "What was the hooker’s name (Jamie Lee Curtis' character)?",
       imgSrc: "assets/images/gifs/trading-places.gif",
       choiceA: "Penelope",
       choiceB: "Amber",
@@ -321,6 +321,7 @@ $(document).ready(function() {
 
 // function to load next question and answers
 function nextQuestion() {
+  $(".textResults").hide();
   $(".textBoxAnswer").show();
   $(".textBox").show();
   $("#countdownTimer").show();
@@ -362,6 +363,8 @@ function correctAnswer() {
   $("#rightWrong").html("CORRECT");
   $("#factoid").html(questions[questionsCount].factoid);
   $("#gif").html(questions[questionsCount].imgSrc);
+  setTimeout(nextQuestion, 10000);
+  setTimeout(backgroundChange, 10000);
 }
 
 // if answer is wrong, plays audioWrong, shows the correct answer and factoid and plays gif
@@ -376,13 +379,9 @@ function wrongAnswer(){
   $("#rightWrong").html("WRONG");
   $("#factoid").html(questions[questionsCount].factoid);
   $("#gif").html(questions[questionsCount].imgSrc);
+  setTimeout(nextQuestion, 10000);
+  setTimeout(backgroundChange, 10000);
 }
-
-// backgroundChange();
-// nextQuestion();
-// stopTimer();
-// resetTimer();
-// startTimer();
 
 
 });
