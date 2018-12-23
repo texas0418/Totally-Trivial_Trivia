@@ -225,7 +225,6 @@ $(document).ready(function() {
   ];
   var backgroundCount = 0;
   var questionsCount = 0;
-  var audioFiveSecLeft = new Audio("assets/audio/time-bomb.mp3");
   var audioCorrect = new Audio("assets/audio/hooray.mp3");
   var audioWrong = new Audio("assets/audio/wrong.mp3");
   var clockRunning = false;
@@ -277,7 +276,6 @@ $(document).ready(function() {
       intervalId = setInterval(count, 1000);
       clockRunning = true;
     }
-    setTimeout(fiveSeconds, 1000 * 25);
   }
 // stops timer
   function stopTimer() {
@@ -288,12 +286,9 @@ $(document).ready(function() {
   function count() {
     countdownTimer--;
     if (countdownTimer == 0) {
-      stopTimer();
-      backgroundChange();
-      nextQuestion();
-      resetTimer();
-      startTimer();
       questionAnswered = false;
+      wrongAnswer();
+      scoreIncorrect++;
     }
 // converts time to seconds and controls the way the data is displayed
     var converted = timeConverter(countdownTimer);
@@ -310,13 +305,11 @@ $(document).ready(function() {
       seconds = "0" + seconds;
     } return minutes + "0:" + seconds;
   }
-// audio alert that starts when there are 5 seconds left on the timer
 
-  function fiveSeconds() {
-    audioFiveSecLeft.play();
-  }
+
+
 // on start button click. hide button and shows question and answers on page
-  $("#game-start-button").click(function() {
+  $("#game-start-button").click(function () {
     $("button").hide();
     $(".textBoxAnswer").show();
     $(".textBox").show();
@@ -328,6 +321,12 @@ $(document).ready(function() {
 
 // function to load next question and answers
 function nextQuestion() {
+  $(".textBoxAnswer").show();
+  $(".textBox").show();
+  $("#countdownTimer").show();
+  $("#pickAnswer").show();
+  resetTimer();
+  startTimer();
 if (questionsCount > questions.length - 1) questionsCount = 0;
     questionsCount++;
     $("#question").html(questions[questionsCount].question);
@@ -339,60 +338,53 @@ if (questionsCount > questions.length - 1) questionsCount = 0;
 
 // When user clicks answer choice, decides if it is correct or wrong.
 
-  $(".textBoxAnswer").on("click", function(){
-     {
-      var answer = $("#id");
-      console.log(answer);
-     }
-     });
 
-function checkAnswer() {
-  if (answer == questions[questionsCount].correctAnswer){
+  $(".textBoxAnswer").click(function() {
+    var userAnswer = $(this).attr("id");
+  if (userAnswer == questions[questionsCount].correctAnswer){
     scoreCorrect++;
     correctAnswer();
   } else {
     scoreIncorrect++;
     wrongAnswer();} 
-}
+});
 
 // If the answer is correct, plays audioCorrect, shows correct, shows factoid, plays a gif. 
 
 function correctAnswer() {
   $(".textBoxAnswer").hide();
+  $("#countdownTimer").hide();
+  $("#pickAnswer").hide();
+  stopTimer();
+  resetTimer();
   $(".textResults").show();
   audioCorrect.play();
   $("#rightWrong").html("CORRECT");
   $("#factoid").html(questions[questionsCount].factoid);
   $("#gif").html(questions[questionsCount].imgSrc);
-  setTimeout(nextQuestion, 10000);
-  backgroundChange();
-  nextQuestion();
-  stopTimer();
-  resetTimer();
-  startTimer();
 }
 
 // if answer is wrong, plays audioWrong, shows the correct answer and factoid and plays gif
 function wrongAnswer(){
   $(".textBoxAnswer").hide();
+  $("#countdownTimer").hide();
+  $("#pickAnswer").hide();
+  stopTimer();
+  resetTimer();
   $(".textResults").show();
   audioWrong.play();
   $("#rightWrong").html("WRONG");
   $("#factoid").html(questions[questionsCount].factoid);
   $("#gif").html(questions[questionsCount].imgSrc);
-  setTimeout(nextQuestion, 10000);
-  backgroundChange();
-  nextQuestion();
-  stopTimer();
-  resetTimer();
-  startTimer();
 }
 
+// backgroundChange();
+// nextQuestion();
+// stopTimer();
+// resetTimer();
+// startTimer();
 
 
-
-
-
+});
 
   
-});
