@@ -100,3 +100,6 @@ body {
   font-family: monospace;
   font-size: 25px;
 }
+#gif {
+  width: 400px;
+}

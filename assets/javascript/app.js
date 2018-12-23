@@ -29,7 +29,8 @@ $(document).ready(function() {
       choiceB: "Little Orphan Annie",
       choiceC: "I Love a Mystery",
       choiceD: "The Green Hornet",
-      correctAnswer: "B"
+      correctAnswer: "B",
+      factoid: ""
     },
     {
       question: "Who did Michael J. Fox replace as the original Marty McFly?",
@@ -38,7 +39,8 @@ $(document).ready(function() {
       choiceB: "Matthew Broderick",
       choiceC: "Eric Stoltz",
       choiceD: "Robert Downey Jr",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "What is the name of the book that you are given when you die?",
@@ -47,7 +49,8 @@ $(document).ready(function() {
       choiceB: "Day of the Dead Handbook",
       choiceC: "Rules of the Dead. An Afterlife Rulebook",
       choiceD: "How to Live Comfortable in the Afterlifer",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "What was on the t-shirt that Axel Foley wore in Beverly Hills Cop?",
@@ -56,7 +59,8 @@ $(document).ready(function() {
       choiceB: "Nike",
       choiceC: "NYPD",
       choiceD: "Detroit Police",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "What is Jack Burton's truck name?",
@@ -65,7 +69,8 @@ $(document).ready(function() {
       choiceB: "Iron Giant",
       choiceC: "Porkchop Express",
       choiceD: "Cannonball",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "What is the name of the phonebook in the phone booth?",
@@ -74,7 +79,8 @@ $(document).ready(function() {
       choiceB: "Back to the Future",
       choiceC: "Future Tense",
       choiceD: "Circuits Of Time",
-      correctAnswer: "D"
+      correctAnswer: "D",
+      factoid: ""
     },
     {
       question: "Brian got an 'F' in shop class because he couldn't make a ceramic what?",
@@ -83,7 +89,8 @@ $(document).ready(function() {
       choiceB: "Tiger",
       choiceC: "Bear",
       choiceD: "Elephant",
-      correctAnswer: "D"
+      correctAnswer: "D",
+      factoid: ""
     },
     {
       question: "What candy does Elliott use to lure E.T. out of the backyard shed?",
@@ -92,7 +99,8 @@ $(document).ready(function() {
       choiceB: "Skittles",
       choiceC: "Gummy Bears",
       choiceD: "M&M’s",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "Which character is incorrectly matched with their occupation?",
@@ -101,7 +109,8 @@ $(document).ready(function() {
       choiceB: "Damone/Ticket Scalper",
       choiceC: "Rat/Movie Theater",
       choiceD: "Stacy/Perry’s Pizza",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "Which of the following was NOT a place visited by Ferris and company?",
@@ -110,7 +119,8 @@ $(document).ready(function() {
       choiceB: "Chez Quis Restauraunt",
       choiceC: "Chicago White Sox Game",
       choiceD: "Chicago Board of Trade",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "Footloose was loosely based on events that took place in which city?",
@@ -119,7 +129,8 @@ $(document).ready(function() {
       choiceB: "Elmore City",
       choiceC: "Broken Bow",
       choiceD: "Sulfur",
-      correctAnswer: "B"
+      correctAnswer: "B",
+      factoid: ""
     },
     {
       question: "Which future pop star had an uncredited role as ‘birthday girl’ at the young age of 13?",
@@ -128,7 +139,8 @@ $(document).ready(function() {
       choiceB: "Tiffany",
       choiceC: "Madonna",
       choiceD: "Cyndi Lauper",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "What is the name of the place that Daniel took Ali on their first date?",
@@ -137,7 +149,8 @@ $(document).ready(function() {
       choiceB: "Putt Putt Golf",
       choiceC: "Golf and Stuff",
       choiceD: "Main Event",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "At at the end of the film who becomes the new Dread Pirate Roberts?",
@@ -146,7 +159,8 @@ $(document).ready(function() {
       choiceB: "Inigo Montoya",
       choiceC: "Fezzik",
       choiceD: "Count Rugen",
-      correctAnswer: "B"
+      correctAnswer: "B",
+      factoid: ""
     },
     {
       question: "In the movie 'Risky Business', Tom Cruise is seen dancing to this Bob Seger song.",
@@ -155,7 +169,8 @@ $(document).ready(function() {
       choiceB: "We've Got Tonight",
       choiceC: "Night Moves",
       choiceD: "Old Time Rock & Roll",
-      correctAnswer: "D"
+      correctAnswer: "D",
+      factoid: ""
     },
     {
       question: "What is the noise that Scott hears at the hardware store in the beginning of the film?",
@@ -164,7 +179,8 @@ $(document).ready(function() {
       choiceB: "A Loud Boom Box",
       choiceC: "A Wolf Howl",
       choiceD: "A Gunshot",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "What candy bar does Chunk get for riding up the hill?",
@@ -173,7 +189,8 @@ $(document).ready(function() {
       choiceB: "Three Musketeers",
       choiceC: "Snickers",
       choiceD: "Mars Bar",
-      correctAnswer: "A"
+      correctAnswer: "A",
+      factoid: ""
     },
     {
       question: "Where do the Frog Brothers work?",
@@ -182,7 +199,8 @@ $(document).ready(function() {
       choiceB: "Record Store",
       choiceC: "Comic Book Store",
       choiceD: "Movie Theater",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "What was the hooker’s name (Jamie Lee Curtis character)?",
@@ -191,7 +209,8 @@ $(document).ready(function() {
       choiceB: "Amber",
       choiceC: "Ophelia",
       choiceD: "Clara",
-      correctAnswer: "C"
+      correctAnswer: "C",
+      factoid: ""
     },
     {
       question: "What type of computer do Wyatt and Gary use to design and build Lisa?",
@@ -200,7 +219,8 @@ $(document).ready(function() {
       choiceB: "Memotech MXT512",
       choiceC: "Commodore VIC-20",
       choiceD: "Texas Instruments TI-99",
-      correctAnswer: "B"
+      correctAnswer: "B",
+      factoid: ""
     },
   ];
   var backgroundCount = 0;
@@ -211,6 +231,9 @@ $(document).ready(function() {
   var clockRunning = false;
   var countdownTimer = 30;
   var intervalId;
+  var questionAnswered;
+  var scoreCorrect = 0;
+  var scoreIncorrect = 0;
 
   // hides everything on window load except the title box and start button
   window.onload = function() {
@@ -218,6 +241,7 @@ $(document).ready(function() {
     $(".textBox").hide();
     $("#countdownTimer").hide();
     $("#pickAnswer").hide();
+    $(".textResults").hide();
   };
   // loads background image and updates css
   $(function() {
@@ -226,24 +250,22 @@ $(document).ready(function() {
       "url(" + backgroundImage[backgroundCount] + ")"
     );
   });
-  // changes background image, questions and answers on click of answers div area
-  $(".textBoxAnswer").click(function() {
+
+  function backgroundChange(){
     if (backgroundCount > backgroundImage.length - 1) backgroundCount = 0;
     backgroundCount++;
     $("body").css(
       "background-image",
       "url(" + backgroundImage[backgroundCount] + ")");
-    if (questionsCount > questions.length - 1) questionsCount = 0;
-    questionsCount++;
-    $("#question").html(questions[questionsCount].question);
-    $("#A").html(questions[questionsCount].choiceA);
-    $("#B").html(questions[questionsCount].choiceB);
-    $("#C").html(questions[questionsCount].choiceC);
-    $("#D").html(questions[questionsCount].choiceD);
-    stopTimer();
-    resetTimer();
-    startTimer();
-  });
+  }
+  // All activities that happens on click of answer
+  // $(".textBoxAnswer").click(function () {
+  //   backgroundChange();
+  //   nextQuestion();
+  //   stopTimer();
+  //   resetTimer();
+  //   startTimer();
+  // });
 // resets timer on each new background and question answer load
   function resetTimer() {
     countdownTimer = 30;
@@ -255,6 +277,7 @@ $(document).ready(function() {
       intervalId = setInterval(count, 1000);
       clockRunning = true;
     }
+    setTimeout(fiveSeconds, 1000 * 25);
   }
 // stops timer
   function stopTimer() {
@@ -266,15 +289,11 @@ $(document).ready(function() {
     countdownTimer--;
     if (countdownTimer == 0) {
       stopTimer();
-      backgroundCount++;
-      if (backgroundCount > backgroundImage.length - 1) backgroundCount = 0;
-      $("body").css("background-image", "url(" + backgroundImage[backgroundCount] + ")");
-      if (questionsCount > questions.length - 1) questionsCount = 0;
-      questionsCount++;
-      $("#question").html(questions[questionsCount].question);
-      stopTimer();
+      backgroundChange();
+      nextQuestion();
       resetTimer();
       startTimer();
+      questionAnswered = false;
     }
 // converts time to seconds and controls the way the data is displayed
     var converted = timeConverter(countdownTimer);
@@ -289,13 +308,9 @@ $(document).ready(function() {
 
     if (seconds < 10) {
       seconds = "0" + seconds;
-    } else if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-    return minutes + ":" + seconds;
+    } return minutes + "0:" + seconds;
   }
 // audio alert that starts when there are 5 seconds left on the timer
-  setTimeout(fiveSeconds, 1000 * 26);
 
   function fiveSeconds() {
     audioFiveSecLeft.play();
@@ -311,21 +326,68 @@ $(document).ready(function() {
     startTimer();
   });
 
-
+// function to load next question and answers
+function nextQuestion() {
+if (questionsCount > questions.length - 1) questionsCount = 0;
+    questionsCount++;
+    $("#question").html(questions[questionsCount].question);
+    $("#A").html(questions[questionsCount].choiceA);
+    $("#B").html(questions[questionsCount].choiceB);
+    $("#C").html(questions[questionsCount].choiceC);
+    $("#D").html(questions[questionsCount].choiceD);
+  }
 
 // When user clicks answer choice, decides if it is correct or wrong.
-// function checkAnswer(){
 
-// }
+  $(".textBoxAnswer").on("click", function(){
+     {
+      var answer = $("#id");
+      console.log(answer);
+     }
+     });
+
+function checkAnswer() {
+  if (answer == questions[questionsCount].correctAnswer){
+    scoreCorrect++;
+    correctAnswer();
+  } else {
+    scoreIncorrect++;
+    wrongAnswer();} 
+}
 
 // If the answer is correct, plays audioCorrect, shows correct, shows factoid, plays a gif. 
-// function correctAnswer(){
-// }
+
+function correctAnswer() {
+  $(".textBoxAnswer").hide();
+  $(".textResults").show();
+  audioCorrect.play();
+  $("#rightWrong").html("CORRECT");
+  $("#factoid").html(questions[questionsCount].factoid);
+  $("#gif").html(questions[questionsCount].imgSrc);
+  setTimeout(nextQuestion, 10000);
+  backgroundChange();
+  nextQuestion();
+  stopTimer();
+  resetTimer();
+  startTimer();
+}
 
 // if answer is wrong, plays audioWrong, shows the correct answer and factoid and plays gif
-// function wrongAnswer(){
-  
-// }
+function wrongAnswer(){
+  $(".textBoxAnswer").hide();
+  $(".textResults").show();
+  audioWrong.play();
+  $("#rightWrong").html("WRONG");
+  $("#factoid").html(questions[questionsCount].factoid);
+  $("#gif").html(questions[questionsCount].imgSrc);
+  setTimeout(nextQuestion, 10000);
+  backgroundChange();
+  nextQuestion();
+  stopTimer();
+  resetTimer();
+  startTimer();
+}
+
 
 
 
