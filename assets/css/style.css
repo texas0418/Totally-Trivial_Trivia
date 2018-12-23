@@ -123,8 +123,8 @@ body {
 h2 {
   padding-bottom: none;
 }
-.finalScore { 
-  width: auto;
+.gameOverPage { 
+  width: 750px;
   line-height: 50px;
   margin-left: auto;
   margin-right: auto;

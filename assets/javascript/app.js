@@ -72,7 +72,7 @@ $(document).ready(function() {
       choiceA: "Doing Time",
       choiceB: "Back to the Future",
       choiceC: "Future Tense",
-      choiceD: "Circuits Of Time",
+      choiceD: "Circuits of Time",
       correctAnswer: "D",
       factoid: "<h2><b>Circuits Of Time</b></h2><br> The original time machine from the script was a 1969 Chevy Van, but the filmmakers didn’t want people to thing they were ripping off Back to the Future. They changed it to a phone booth and apparently weren’t concerned about Doctor Who. When the van was in the script, Bill and Ted picked up even more historical figures than they did in the final film."
     },
@@ -164,7 +164,7 @@ $(document).ready(function() {
       choiceC: "A Wolf Howl",
       choiceD: "A Gunshot",
       correctAnswer: "A",
-      factoid: "<h2><b>A Kid Blowing A Dog Whistle</b></h2> <br>The Movie was a Rush Job; the entire film was shot in 21 days around a break Michael J. Fox had in his Family Ties production schedule."
+      factoid: "<h2><b>A Kid Blowing A Dog Whistle</b></h2> <br>The movie was a rush job. The entire film was shot in 21 days around a break Michael J. Fox had in his Family Ties production schedule."
     },
     {
       question: "What candy bar does Chunk get for riding up the hill?",
@@ -200,7 +200,7 @@ $(document).ready(function() {
       choiceC: "Commodore VIC-20",
       choiceD: "Texas Instruments TI-99",
       correctAnswer: "B",
-      factoid: "<h2><b>Memotech MXT512</b></h2> <br>Wyatt's computer, with which they hack into the Pentagon mainframe, is a Memotech MTX512 with an FDX add-on. Memotech actually went into receivership in 1985 because the MTX series sold so badly."
+      factoid: "<h2><b>Memotech MTX512</b></h2> <br>Wyatt's computer, with which they hack into the Pentagon mainframe, is a Memotech MTX512 with an FDX add-on. Memotech actually went into receivership in 1985 because the MTX series sold so badly."
     },
   ];
   var backgroundCount = 0;
@@ -211,7 +211,6 @@ $(document).ready(function() {
   var clockRunning = false;
   var countdownTimer = 30;
   var intervalId;
-  var questionAnswered;
   var scoreCorrect = 0;
   var scoreIncorrect = 0;
 
@@ -238,15 +237,10 @@ $(document).ready(function() {
     $("body").css(
       "background-image",
       "url(" + backgroundImage[backgroundCount] + ")");
+    if (backgroundCount == backgroundImage.length)
+    finalScore();
   }
-  // All activities that happens on click of answer
-  // $(".textBoxAnswer").click(function () {
-  //   backgroundChange();
-  //   nextQuestion();
-  //   stopTimer();
-  //   resetTimer();
-  //   startTimer();
-  // });
+
 // resets timer on each new background and question answer load
   function resetTimer() {
     countdownTimer = 30;
@@ -268,7 +262,6 @@ $(document).ready(function() {
   function count() {
     countdownTimer--;
     if (countdownTimer == 0) {
-      questionAnswered = false;
       timesUp();
       scoreIncorrect++;
     }
@@ -310,17 +303,16 @@ function nextQuestion() {
   $("#pickAnswer").show();
   resetTimer();
   startTimer();
-if (questionsCount > questions.length - 1) questionsCount = 0;
-    questionsCount++;
+if (questionsCount < questions.length - 1)
+questionsCount++;
     $("#question").html(questions[questionsCount].question);
     $("#A").html(questions[questionsCount].choiceA);
     $("#B").html(questions[questionsCount].choiceB);
     $("#C").html(questions[questionsCount].choiceC);
     $("#D").html(questions[questionsCount].choiceD);
-  }
-  if(questionsCount == (questions.length-1)){
-    setTimeout(finalScore, 10000);
-  }
+}
+
+
 
 // When user clicks answer choice, decides if it is correct or wrong.
 
@@ -345,7 +337,7 @@ function correctAnswer() {
   resetTimer();
   $(".textResults").show();
   audioCorrect.play();
-  $("#rightWrong").html("CORRECT");
+  $("#rightWrong").html("<p>" + "CORRECT!".fontcolor("green") + "</p>");
   $("#factoid").html(questions[questionsCount].factoid);
   setTimeout(nextQuestion, 10000);
   setTimeout(backgroundChange, 10000);
@@ -360,7 +352,7 @@ function wrongAnswer(){
   resetTimer();
   $(".textResults").show();
   audioWrong.play();
-  $("#rightWrong").html("WRONG");
+  $("#rightWrong").html("<p>" + "WRONG!".fontcolor("red") + "</p>");
   $("#factoid").html(questions[questionsCount].factoid);
   setTimeout(nextQuestion, 10000);
   setTimeout(backgroundChange, 10000);
@@ -374,11 +366,12 @@ function timesUp(){
   resetTimer();
   $(".textResults").show();
   audioTimeUp.play();
-  $("#rightWrong").html("TIME UP");
+  $("#rightWrong").html("TIME UP!");
   $("#factoid").html(questions[questionsCount].factoid);
   setTimeout(nextQuestion, 10000);
   setTimeout(backgroundChange, 10000);
 }
+
 
 function finalScore(){
   $(".textBoxAnswer").hide();
@@ -387,15 +380,14 @@ function finalScore(){
   $("#pickAnswer").hide();
   $(".textResults").hide();
   $(".finalScore").show();
+  stopTimer();
+  resetTimer();
+  
 
   $('#finalMessage').html("Thanks for Playing!!");
 	$('#correctAnswers').html("Correct Answers: " + scoreCorrect);
 	$('#incorrectAnswers').html("Incorrect Answers: " + scoreIncorrect);
-  $('#playAgainBtn').addClass("reset");
-	$('#playAgainBtn').show();
-	$('#playAgainBtn').html("Would You Like to Play Again?");
 }
-
 
 });
 
