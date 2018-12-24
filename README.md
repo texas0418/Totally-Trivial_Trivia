@@ -1,4 +1,4 @@
-##80s Era Trivia Game
+<h2>80s Era Trivia Game
 
 Homework 5. Create a interactive trivia game using Javascript and jQuery
 
